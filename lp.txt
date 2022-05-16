@@ -160,10 +160,8 @@ bool cont=true;
     return 0;
 }
 
-_____________________________________________________________________
 
-
-
+____________________________________________________________
 
 
 
@@ -413,7 +411,7 @@ and Bound */
 #include <iostream>
 # include <string.h>
 using namespace std;
-#define N 8
+#define N 10
 
 /* A utility function to print solution */
 void printSolution(int board[N][N])
@@ -519,8 +517,8 @@ bool solveNQueens()
 	// initialize helper matrices
 	for (int r = 0; r < N; r++)
 		for (int c = 0; c < N; c++) {
-		slashCode[r] = r + c,
-			backslashCode[r] = r - c + 7;
+		slashCode[r][c] = r + c,
+			backslashCode[r][c] = r - c + 7;
 		}
 
 	if (solveNQueensUtil(board, 0,
@@ -544,10 +542,6 @@ int main()
 
 	return 0;
 }
-
-// this code is contributed by shivanisinghss2110
-
-
 
 
 
